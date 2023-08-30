@@ -16,20 +16,20 @@ const fs = require('fs');
 //const data = fs.readFileSync('notes1.txt', 'utf8');
 //console.log(data);
 
-//example of synchronous file io and setting file permissions
-//fs.writeFileSync('notes2.txt', 'This file was created by Node.js!', { mode: 0o700 });
+// //example of synchronous file io and setting file permissions
+// fs.writeFileSync('notes2.txt', 'This file was created by Node.js!', { mode: 0o700 });
 
 
-//example of synchronous file io catching IO errors 
-//try {
+// //example of synchronous file io catching IO errors 
+// try {
 //    const data = fs.readFileSync('notes122.txt');
 //    console.log(data.toString());
-//}
-//catch (err) {
+// }
+// catch (err) {
 //    console.log("An error occurred while reading the file!");
-//}
+// }
 
-//example of synchronous file io using file descriptors and try/catch/finally
+// //example of synchronous file io using file descriptors and try/catch/finally
 // let fd;
 // try {
 //     // Open the file and get the file descriptor
@@ -57,16 +57,16 @@ const fs = require('fs');
 // }
 
 //Example writing an object to a file
-//  const book = {
-//      title: 'Ego is the Enemy',
-//      author: 'Ryan Holiday'
-//  }
+ const book = {
+     title: 'Ego is the Enemy',
+     author: 'Ryan Holiday'
+ }
 
 //Convert the object to a JSON string
-//const bookJSON = JSON.stringify(book);
+const bookJSON = JSON.stringify(book);
 
 //Write the JSON string to a file
-//fs.writeFileSync('book.json', bookJSON);
+fs.writeFileSync('book.json', bookJSON);
 
 
 //Example reading a JSON file
